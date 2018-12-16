@@ -42,7 +42,7 @@ public class Fruit {
 
     @Override
     public String toString() {
-        return "Fruit {" +
+        return "Fruit{" +
                 "type=" + type +
                 ", shelfLife=" + shelfLife +
                 ", date=" + date +

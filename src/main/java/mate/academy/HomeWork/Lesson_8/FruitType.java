@@ -7,4 +7,5 @@ public enum FruitType {
     BANANA,
     MANGO,
     COCONUT,
+    GRAPEFRUIT;
 }

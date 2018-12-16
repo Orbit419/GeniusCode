@@ -84,7 +84,6 @@ public class TradeShop {
             if (((date.getTime() - elem.getDate().getTime()) / (24 * 60 * 60 * 1000)) < elem.getShelfLife())
                 availableFruits.add(elem);
         }
-
         return availableFruits;
     }
 
@@ -95,7 +94,6 @@ public class TradeShop {
                 if (((date.getTime() - elem.getDate().getTime()) / (24 * 60 * 60 * 1000)) < elem.getShelfLife())
                     availableFruits.add(elem);
         }
-
         return availableFruits;
     }
 
