@@ -47,8 +47,7 @@ public class TradeShop {
         fruitList.clear();
 
         try {
-            fruitList = mapper.readValue(new File(pathToJsonFile), new TypeReference<List<Fruit>>() {
-            });
+            fruitList = mapper.readValue(new File(pathToJsonFile), new TypeReference<List<Fruit>>() {});
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (JsonProcessingException e) {

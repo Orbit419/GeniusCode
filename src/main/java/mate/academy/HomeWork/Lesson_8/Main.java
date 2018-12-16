@@ -10,6 +10,7 @@ public class Main {
 
         fruits.add(new Fruit());
         fruits.add(new Fruit());
+
         fruits.get(0).setType(FruitType.APPLE);
         fruits.get(0).setShelfLife(30);
         fruits.get(0).setDate(new Date(118, 11, 15));
