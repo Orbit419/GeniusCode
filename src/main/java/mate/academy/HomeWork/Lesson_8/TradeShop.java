@@ -45,20 +45,16 @@ public class TradeShop {
     }
 
     public void load(String pathToJsonFile) {
-        if (new File(pathToJsonFile).length() != 0) {
-            fruitList.clear();
-
-            try {
-                fruitList = mapper.readValue(new File(pathToJsonFile), new TypeReference<List<Fruit>>() {});
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try {
+            fruitList = mapper.readValue(new File(pathToJsonFile), new TypeReference<List<Fruit>>() {});
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        else System.out.println("File is empty!");
+
     }
 
     public List<Fruit> getSpoiledFruits(Date date) {
@@ -108,7 +104,7 @@ public class TradeShop {
     }
 
     private int dateDifference(Date date, Fruit fruit) {
-        return (int)((date.getTime() - fruit.getDate().getTime()) / (24 * 60 * 60 * 1000));
+        return (int) ((date.getTime() - fruit.getDate().getTime()) / (24 * 60 * 60 * 1000));
     }
 
     public List<Fruit> getFruitList() {
