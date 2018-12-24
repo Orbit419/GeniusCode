@@ -8,16 +8,18 @@ public class Main {
     public static void main(String[] args) {
         List<Fruit> fruits = new ArrayList<>();
 
-        fruits.add(new Fruit());
-        fruits.add(new Fruit());
-        fruits.get(0).setType(FruitType.APPLE);
-        fruits.get(0).setShelfLife(30);
-        fruits.get(0).setDate(new Date(118, 11, 15));
-        fruits.get(0).setPrice(100);
-        fruits.get(1).setType(FruitType.BANANA);
-        fruits.get(1).setShelfLife(10);
-        fruits.get(1).setDate(new Date(118, 11, 15));
-        fruits.get(1).setPrice(120);
+        Fruit fruit1 = new Fruit();
+        Fruit fruit2 = new Fruit();
+        fruit1.setType(FruitType.APPLE);
+        fruit1.setShelfLife(30);
+        fruit1.setDate(new Date(118, 11, 15));
+        fruit1.setPrice(100);
+        fruit2.setType(FruitType.BANANA);
+        fruit2.setShelfLife(10);
+        fruit2.setDate(new Date(118, 11, 15));
+        fruit2.setPrice(120);
+        fruits.add(fruit1);
+        fruits.add(fruit2);
 
         TradeShop shop = new TradeShop();
 
@@ -32,16 +34,18 @@ public class Main {
 
         fruits.clear();
 
-        fruits.add(new Fruit());
-        fruits.add(new Fruit());
-        fruits.get(0).setType(FruitType.CHERRY);
-        fruits.get(0).setShelfLife(20);
-        fruits.get(0).setDate(new Date(118, 11, 16));
-        fruits.get(0).setPrice(90);
-        fruits.get(1).setType(FruitType.COCONUT);
-        fruits.get(1).setShelfLife(60);
-        fruits.get(1).setDate(new Date(118, 11, 16));
-        fruits.get(1).setPrice(240);
+        Fruit fruit3 = new Fruit();
+        Fruit fruit4 = new Fruit();
+        fruit3.setType(FruitType.CHERRY);
+        fruit3.setShelfLife(20);
+        fruit3.setDate(new Date(118, 11, 16));
+        fruit3.setPrice(90);
+        fruit4.setType(FruitType.COCONUT);
+        fruit4.setShelfLife(60);
+        fruit4.setDate(new Date(118, 11, 16));
+        fruit4.setPrice(240);
+        fruits.add(fruit3);
+        fruits.add(fruit4);
 
         shop.addFruits(fruits, "Supply_16-12-2018.json");
         System.out.println(shop.getFruitList());
