@@ -12,4 +12,20 @@ public class MyUserServiceImpl implements MyUserService {
     public void printSumSalaryForProject(String project) {
         myUserDao.printSumSalaryForProject(project);
     }
+
+    public void printAllDevsOnProject(String project) {
+        myUserDao.printAllDevsOnProject(project);
+    }
+
+    public void printAllJavaDevs() {
+        myUserDao.printAllJavaDevs();
+    }
+
+    public void printAllMiddleDevs() {
+        myUserDao.printAllMiddleDevs();
+    }
+
+    public void printAllProjects() {
+        myUserDao.printAllProjects();
+    }
 }

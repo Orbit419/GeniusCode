@@ -11,12 +11,13 @@ public class MyConnectionUtil {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/developing?serverTimeZone=UTC", "root", "1234");
+                    .getConnection("jdbc:mysql://localhost:3306/developing?useLegacyDatetimeCode=false&serverTimezone=UTC", "root", "1234");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
             System.exit(1);
         }
     }
+
     public static Connection getConnection() {
         return connection;
     }

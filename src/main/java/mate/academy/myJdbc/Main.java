@@ -11,5 +11,13 @@ public class Main {
         MyUserService myUserService = new MyUserServiceImpl(myUserDao);
 
         myUserService.printSumSalaryForProject("Astra");
+
+        myUserService.printAllDevsOnProject("Astra");
+
+        myUserService.printAllJavaDevs();
+
+        myUserService.printAllMiddleDevs();
+
+        myUserService.printAllProjects();
     }
 }
