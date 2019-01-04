@@ -1,6 +1,10 @@
 package mate.academy.myJdbc.service;
 
 import mate.academy.myJdbc.dao.MyUserDao;
+import mate.academy.myJdbc.model.Developer;
+import mate.academy.myJdbc.model.Project;
+
+import java.util.Set;
 
 public class MyUserServiceImpl implements MyUserService {
     private final MyUserDao myUserDao;
@@ -13,19 +17,19 @@ public class MyUserServiceImpl implements MyUserService {
         myUserDao.printSumSalaryForProject(project);
     }
 
-    public void printAllDevsOnProject(String project) {
-        myUserDao.printAllDevsOnProject(project);
+    public Set<Developer> getAllDevsOnProject(String project) {
+        return myUserDao.getAllDevsOnProject(project);
     }
 
-    public void printAllJavaDevs() {
-        myUserDao.printAllJavaDevs();
+    public Set<Developer> getAllJavaDevs() {
+        return myUserDao.getAllJavaDevs();
     }
 
-    public void printAllMiddleDevs() {
-        myUserDao.printAllMiddleDevs();
+    public Set<Developer> getAllMiddleDevs() {
+        return myUserDao.getAllMiddleDevs();
     }
 
-    public void printAllProjects() {
-        myUserDao.printAllProjects();
+    public Set<Project> getAllProjects() {
+        return myUserDao.getAllProjects();
     }
 }

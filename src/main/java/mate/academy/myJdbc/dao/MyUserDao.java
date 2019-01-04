@@ -1,13 +1,19 @@
 package mate.academy.myJdbc.dao;
 
+import mate.academy.myJdbc.model.Developer;
+import mate.academy.myJdbc.model.Project;
+
+import java.util.Set;
+
 public interface MyUserDao {
+    // get objects
     void printSumSalaryForProject(String project);
 
-    void printAllDevsOnProject(String project);
+    Set<Developer> getAllDevsOnProject(String project);
 
-    void printAllJavaDevs();
+    Set<Developer> getAllJavaDevs();
 
-    void printAllMiddleDevs();
+    Set<Developer> getAllMiddleDevs();
 
-    void printAllProjects();
+    Set<Project> getAllProjects();
 }
